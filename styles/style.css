@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  color: #ce9898;
+}
+body::before {
+  content: "";
+  background-image: url(../assets/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -9999;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  max-width: calc(100vw - 4rem);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.nav-logo {
+  width: 6.25rem;
+  height: 1.305625rem;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+}
+.hero-imgbox {
+  margin: 0 auto 4rem;
+  display: flex;
+  justify-content: center;
+}
+.hero-right {
+  max-width: calc(100vw - 4rem);
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-right-txt__heading {
+  font-size: 2.5rem;
+  line-height: 1.11;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 10.8254px;
+  margin-bottom: 1rem;
+}
+.hero-right-txt__heading span {
+  color: #423a3a;
+  font-weight: 600;
+}
+.hero-right-txt__para {
+  font-size: 0.875rem;
+  line-height: 1.57;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.hero-right-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 6.25rem;
+}
+
+.email-form {
+  position: relative;
+  width: 100%;
+}
+
+.email-field {
+  border: 1px solid #ce9898;
+  border-radius: 6.25rem;
+  width: 100%;
+  height: 3rem;
+  color: #423a3a;
+  line-height: 2;
+  padding-right: 4.25rem;
+  padding-left: 1.5rem;
+  font-size: 0.875rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+.email-field::placeholder {
+  color: #ce9898;
+  font-weight: 400;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  line-height: 2;
+}
+.email-field:focus {
+  outline: none;
+}
+
+.submit-btn {
+  position: absolute;
+  top: 50%;
+  right: -0.125rem;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 100%;
+  border-radius: 6.25rem;
+  border: none;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.25);
+  cursor: pointer;
+}
+
+.error-msg {
+  font-size: 0.875rem;
+  line-height: 2.15;
+  margin-left: 1.5rem;
+  color: #f96464;
+  text-align: left;
+}
+
+.error-email {
+  border: 2px solid #f96464;
+}
+
+.error-icon-style {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 4.75rem;
+  transform: translateY(-50%);
+}
+
+.error-icon-style.active {
+  display: block;
+}
+
+.email-field.error {
+  padding-right: 6.875rem;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    padding: 2.5rem 0;
+  }
+  .hero {
+    display: flex;
+    max-width: calc(100vw - 4rem);
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-imgbox {
+    margin: 0;
+  }
+  .hero-imgbox img {
+    width: 19.0625rem;
+    height: 25rem;
+  }
+  .hero-right {
+    text-align: left;
+    margin: 0;
+    width: 45%;
+  }
+  .error-icon-style {
+    right: 4.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav {
+    max-width: calc(100vw - 20.625rem);
+    padding: 4.625rem 0 8.5rem;
+  }
+  .nav-logo {
+    width: 9.875rem;
+    height: 2.0625rem;
+  }
+  .hero {
+    display: grid;
+    align-items: center;
+    max-width: calc(100vw - 20.625rem);
+  }
+  .hero-imgbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .hero-imgbox img {
+    width: 100%;
+    height: 100vh;
+  }
+  .hero-right {
+    align-content: flex-start;
+    width: 27.8125rem;
+  }
+  .hero-right-txt__heading {
+    font-size: 4rem;
+    line-height: 1.11;
+    letter-spacing: 17.3206px;
+    margin-bottom: 2rem;
+  }
+  .hero-right-txt__para {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+  .email-field {
+    height: 3.5rem;
+    font-size: 1rem;
+    padding-right: 6.5rem;
+  }
+  .email-field::placeholder {
+    font-size: 1rem;
+  }
+  .submit-btn {
+    width: 6.25rem;
+  }
+  .error-icon-style {
+    right: 7.25rem;
+  }
+  .email-field.error {
+    padding-right: 9.75rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,153 @@
+@import "reset";
+@import "variable";
+@import "function";
+
+body {
+  color: $darkCream;
+
+  &::before {
+    content: "";
+    background-image: url(../assets/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -9999;
+    top: 0;
+    left: 0;
+  }
+}
+
+.nav {
+  max-width: calc(100vw - rem(64));
+  margin: 0 auto;
+  padding: rem(32) 0;
+
+  &-logo {
+    width: rem(100);
+    height: rem(20.89);
+  }
+}
+
+.hero {
+  margin-bottom: rem(40);
+
+  &-imgbox {
+    margin: 0 auto rem(64);
+    display: flex;
+    justify-content: center;
+  }
+
+  &-right {
+    max-width: calc(100vw - rem(64));
+    margin: 0 auto;
+    text-align: center;
+
+    &-txt {
+      &__heading {
+        font-size: rem(40);
+        line-height: 1.11;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 10.8254px;
+        margin-bottom: rem(16);
+
+        & span {
+          color: $brown;
+          font-weight: 600;
+        }
+      }
+
+      &__para {
+        font-size: rem(14);
+        line-height: 1.57;
+        font-weight: 400;
+        margin-bottom: rem(32);
+      }
+    }
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: rem(4);
+      height: rem(100);
+    }
+  }
+}
+
+.email-form {
+  position: relative;
+  width: 100%;
+}
+
+.email-field {
+  border: 1px solid $darkCream;
+  border-radius: rem(100);
+  width: 100%;
+  height: rem(48);
+  color: $brown;
+  line-height: 2;
+  padding-right: rem(68);
+  padding-left: rem(24);
+  font-size: rem(14);
+  font-family: "Josefin Sans", sans-serif;
+
+  &::placeholder {
+    color: $darkCream;
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: rem(14);
+    line-height: 2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.submit-btn {
+  position: absolute;
+  top: 50%;
+  right: rem(-2);
+  transform: translateY(-50%);
+  width: rem(64);
+  height: 100%;
+  border-radius: rem(100);
+  border: none;
+  display: grid;
+  place-content: center;
+  background: $gradient;
+  box-shadow: $boxShadow;
+  cursor: pointer;
+}
+.error-msg {
+  font-size: rem(14);
+  line-height: 2.15;
+  margin-left: rem(24);
+  color: $errorClr;
+  text-align: left;
+}
+
+.error-email {
+  border: 2px solid $errorClr;
+}
+
+.error-icon-style {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: rem(76);
+  transform: translateY(-50%);
+}
+
+.error-icon-style.active {
+  display: block;
+}
+
+.email-field.error {
+  padding-right: rem(110);
+}
+
+@import "tablet";
+@import "desktop";

@@ -1,0 +1,69 @@
+@media (min-width: 1024px) {
+  .nav {
+    max-width: calc(100vw - rem(330));
+    padding: rem(74) 0 rem(136);
+
+    &-logo {
+      width: rem(158);
+      height: rem(33);
+    }
+  }
+
+  .hero {
+    display: grid;
+    align-items: center;
+    max-width: calc(100vw - rem(330));
+    &-imgbox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      & img {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
+    &-right {
+      align-content: flex-start;
+      width: rem(445);
+
+      &-txt {
+        &__heading {
+          font-size: rem(64);
+          line-height: 1.11;
+          letter-spacing: 17.3206px;
+          margin-bottom: rem(32);
+        }
+
+        &__para {
+          font-size: rem(16);
+          line-height: 1.75;
+          margin-bottom: rem(40);
+        }
+      }
+    }
+  }
+
+  .email-field {
+    height: rem(56);
+    font-size: rem(16);
+    padding-right: rem(104);
+
+    &::placeholder {
+      font-size: rem(16);
+    }
+  }
+
+  .submit-btn {
+    width: rem(100);
+  }
+
+  .error-icon-style {
+    right: rem(116);
+  }
+
+  .email-field.error {
+    padding-right: rem(156);
+  }
+  
+}

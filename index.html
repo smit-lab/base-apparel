@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="prefetch stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Base Apparel</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="#">
+          <img
+            src="./assets/logo.svg"
+            alt="Base Apparel logo"
+            class="nav-logo"
+          />
+        </a>
+      </nav>
+    </header>
+    <main class="hero">
+      <div class="hero-imgbox">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/hero-desktop.jpg"
+          />
+          <img
+            src="./assets/hero-mobile.jpg"
+            alt="Hero image"
+            width="375px"
+            height="250px"
+          />
+        </picture>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-right-txt">
+          <h1 class="hero-right-txt__heading">
+            we're <span>coming soon</span>
+          </h1>
+          <p class="hero-right-txt__para">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <div class="hero-right-form">
+            <div class="form">
+              <form action="#" novalidate id="form" class="email-form">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  id="email"
+                  class="email-field"
+                />
+                <button type="submit" id="submit" class="submit-btn">
+                  <img src="./assets/icon-arrow.svg" alt="" />
+                </button>
+                <img src="./assets/icon-error.svg" alt="error icon" id="error-icon" class="error-icon-style">
+              </form>
+            </div>
+            <div id="error"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
